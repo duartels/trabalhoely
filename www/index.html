@@ -1,0 +1,238 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" 
+        content="width=device-width,
+                 initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" type="text/css"
+        href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/material.css"/>
+        <link rel="stylesheet" href="css/material.indigo-pink.min.css"/>
+        <link rel="stylesheet" href="css/css.css"/>
+       <link rel="stylesheet" href="fontawesome/css/fontawesome-all.min.css"/>
+       
+
+        <title>CONTA NA PONTA</title>
+    </head>
+    <body>
+       <nav class="navbar navbar-dark bg-dark">
+            <h4 class="corFonteHeader">
+                    Conta na Ponta
+            </h4>
+            <button type="button" class="btn btn-light" 
+            id="btnHome">
+            <i class="fas fa-home fa-lg"></i>
+            </button>
+            
+            <!--<button type="button" class="btn btn-success" id="btnNovo">
+                <i class="fa fa-plus-square fa-lg"></i>
+            </button>-->
+        </nav>
+ <!------------------------------------------ home -------------------------------------------------->    
+        <div class="container" id="home">
+            <!--<div>
+                <button type="button" class="btn btn-warning botaoMenuTopo" id="btnNovaConta">Nova Conta</button>
+            </div>-->
+            <div>
+                <button type="button" class="btn btn-warning botaoMenuTopo" id="btnListaAmigos">Lista de Amigos</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-warning botaoMenu" id="btnListaContas">Lista de Contas</button>
+            </div>
+        </div>
+ <!------------------------------------------ home -------------------------------------------------->    
+
+<!------------------------------------- novoAlteraAmigo -------------------------------------------------->
+        <div class="container" id="novoAlteraAmigo" style="display: none">
+            <h5 class="subTitulo">Amigo</h5>
+            <div class="card" style="margin-top: 5%;">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="amigo">Nome</label>
+                        <input type="text" class="form-control" id="nomeAmigo" placeholder="Nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="amigo">Telefone</label>
+                        <input type="number" class="form-control" id="telefoneAmigo" placeholder="Telefone">
+                    </div>
+
+                    <button type="button" class="btn btn-success" id="btnSalvarAmigo">
+                        <i class="fas fa-save"></i> Salvar
+                    </button>
+                    <button type="button" class="btn btn-danger" id="btnExcluirAmigo">
+                        <i class="fas fa-trash"></i> Excluir
+                    </button>
+                    <button type="button" class="btn btn-warning" id="btnVoltarListaAmigo">
+                        <i class="fas fa-chevron-circle-left"></i>
+                        Voltar
+                    </button>
+                </div>
+            </div>
+        </div>
+<!------------------------------------- novoAlteraAmigo -------------------------------------------------->
+
+<!------------------------------------- listaAmigos -------------------------------------------------->
+        
+        <div class="container" id="listaAmigos" style="display: none">
+            <h5 class="subTitulo">Lista de Amigos</h5>
+            <ul class="list-group" id="itensAmigo" style="margin-top: 5%">
+            </ul>
+
+            <div>
+                <button type="button" class="btn btn-warning botaoMenu" id="btnNovoAmigo">Novo Amigo</button>
+            </div>
+        </div>
+<!------------------------------------- listaAmigos -------------------------------------------------->
+
+<!------------------------------------- listaContas -------------------------------------------------->
+    <div class="container" id="listaContas" style="display: none">
+        <h5 class="subTitulo">Lista de Contas</h5>
+        <div class="list-group" id="itensConta" style="margin-top: 5%">
+        </div>
+
+        <div>
+            <button type="button" class="btn btn-warning botaoMenu" id="btnNovaConta">Nova Conta</button>
+        </div>
+    </div>
+<!------------------------------------- listaContas -------------------------------------------------->
+
+<!------------------------------------------ Cadastro de contas -------------------------------------->
+    <div class="container" id="novaConta" style="display: none">
+            <h5 class="subTitulo">Itens Consumidos</h5>
+            <div class="list-group" id="itensConsumidos" style="margin-top: 5%">
+
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-warning botaoMenu" id="btnNovoItem">
+                            <i class="fas fa-plus-square fa-lg"></i>
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-warning botaoMenu" id="btnProximaTelaAmigos">
+                            <i class="fas fa-arrow-circle-right fa-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    </div>    
+<!------------------------------------------ Cadastro de contas -------------------------------------->
+
+<!--------------------------------- Adição de itens -------------------------------------------------->
+    <div class="container" id="novoItem" style="display: none">
+        <h5 class="subTitulo">Item</h5>
+        <div class="card" style="margin-top: 5%;">
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="produto">Produto</label>
+                    <input type="text" class="form-control" id="produto" placeholder="Nome">
+                </div>
+                <div class="form-group">
+                    <label for="produto">Preço</label>
+                    <input type="number" class="form-control" id="preco" placeholder="R$">
+                </div>
+                <div class="form-group">
+                        <label for="produto">Quantidade</label>
+                        <input type="number" class="form-control" id="quantidade" placeholder="Quantidade">
+                </div>
+
+                <button type="button" class="btn btn-success" id="btnSalvarItem">
+                    <i class="fas fa-save"></i> Salvar
+                </button>
+                <button type="button" class="btn btn-danger" id="btnExcluirItem">
+                    <i class="fas fa-trash"></i> Excluir
+                </button>
+                <button type="button" class="btn btn-warning" id="btnVoltarListaItens">
+                    <i class="fas fa-chevron-circle-left"></i>
+                    Voltar
+                </button>
+            </div>
+        </div>
+    </div>    
+<!--------------------------------- Adição de itens -------------------------------------------------->
+
+<!---------------------------------- Lista de amigos na conta ---------------------------------------->
+    <div class="container" id="listaAmigosConta" style="display: none">
+        <h5 class="subTitulo">Selecione os amigos</h5>
+        <div class="list-group" id="itensAmigoConta" style="margin-top: 5%">
+        </div>
+            
+        <div>
+            <div class="row">
+                <div class="col-6">
+                    <button type="button" class="btn btn-warning botaoMenu" id="voltarItens">
+                        <i class="fas fa-arrow-circle-left fa-lg"></i>
+                    </button>
+                </div>
+                <div class="col-6">
+                    <button type="button" class="btn btn-warning botaoMenu" id="btnProximaTelaResumo">
+                        <i class="fas fa-arrow-circle-right fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!---------------------------------- Lista de amigos na conta ---------------------------------------->
+
+<!---------------------------------- Resumo da conta para salvar ---------------------------------->
+    <div class="container" id="resumoConta" style="display: none">
+            <h5 class="subTitulo">Itens Consumidos</h5>
+            <div class="list-group" id="itensConsumidosConta" style="margin-top: 5%">
+            </div>
+
+            <h5 class="subTitulo">Amigos na Conta</h5>
+            <div class="list-group" id="itensAmigosContaFinal" style="margin-top: 5%">
+            </div>
+
+            <div class="card" style="margin-top: 5%;">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="conta">Nome da Conta</label>
+                            <input type="text" class="form-control" id="nomeConta" placeholder="Nome da Conta">
+                        </div>
+                        <div class="form-group">
+                            <label for="conta">Preço Final da Conta</label>
+                            <input type="number" class="form-control" id="precoFinal" placeholder="R$" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="produto">Preço Dividido</label>
+                            <input type="number" class="form-control" id="precoDividido" placeholder="R$" disabled>
+                        </div>
+        
+                        <button type="button" class="btn btn-success" id="btnSalvarConta">
+                            <i class="fas fa-save fa-lg"></i> Salvar
+                        </button>
+                        <button type="button" class="btn btn-danger" id="btnExcluirConta">
+                                <i class="fas fa-trash"></i> Excluir
+                        </button>
+                        <button type="button" class="btn btn-warning" id="btnVoltarListaAmigosMarcados">
+                            <i class="fas fa-chevron-circle-left fa-lg"></i>
+                            Voltar
+                        </button>
+                        <button type="button" class="btn btn-warning" id="btnVoltarListaContas">
+                            <i class="fas fa-chevron-circle-left fa-lg"></i>
+                            Voltar
+                        </button>
+                        
+                    </div>
+                </div>
+
+    </div>  
+<!---------------------------------- Resumo da conta para salvar ---------------------------------->
+
+
+<!-------------------------------------------- Mensagem ------------------------------------------>
+    <div id="mensagem"></div>
+<!-------------------------------------------- Mensagem ------------------------------------------>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/dao.js"></script>
+        <script src="js/scripts.js"></script>
+        <script defer src="js/material.min.js"></script>
+
+
+    </body>
+</html>

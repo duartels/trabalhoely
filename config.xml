@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <widget xmlns  = "http://www.w3.org/ns/widgets"
+     xmlns:gap  = "http://phonegap.com/ns/1.0"
+     id     = "com.luan.conta"
+     versionCode = "10" 
+     version   =   "1.0.0" >
+ 
+   <name>Conta na Ponta</name>
+ 
+   <description>
+     An example for phonegap build docs. 
+   </description>
+ 
+ 
+   <author href="https://build.phonegap.com" email="luansouza789@gmail.com">
+     Luan Duarte
+    </author>    
+    <icon src="res/icon/icon.png" />
+    <gap:splash src="res/screen/screen.png"  /> 
+</widget>
